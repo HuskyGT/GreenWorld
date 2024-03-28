@@ -78,7 +78,7 @@ namespace GreenWorld
                         if (alteredRenderersDict.ContainsKey(renderer))
                             return;
 
-                        alteredRenderersDict.Add(renderer, renderer.material);
+                        alteredRenderersDict.Add(renderer, renderer.sharedMaterial);
                         renderer.material = greenMat;
                     }
                 }
