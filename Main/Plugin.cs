@@ -48,7 +48,14 @@ namespace GreenWorld
         {
             foreach (KeyValuePair<Renderer, Material> keypair in alteredRenderersDict)
             {
-                keypair.Key.material = keypair.Value;
+                try
+                {
+                    keypair.Key.material = keypair.Value;
+                }
+                catch
+                {
+                    continue;
+                }
             }
             alteredRenderersDict.Clear();
         }
